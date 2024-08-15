@@ -1,8 +1,18 @@
 /* Query para Android - 360px */
 @media screen and (min-width: 360px) {
+  /* Contenedor del TextArea */
   #Contenedot-TextArea_TAFT {
     /* border: 2px solid coral; */
     display: flex;
     flex-direction: column;
+  }
+
+  /* Propiedades del Textarea */
+  #TextArea_TAFT{
+    border: 1px solid gainsboro;
+    height: 6rem;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 14px;
   }
 }
