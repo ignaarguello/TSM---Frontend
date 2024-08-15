@@ -1,0 +1,8 @@
+/* Estilos Form Task */
+
+ /* Query para Android - 360px */
+@media screen and (min-width:360px) {
+    #Contenedor-General_FormTask{
+        /* border: 2px solid slateblue; */
+    }
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { PlusIcon } from '@heroicons/react/24/outline'
+import FormTask from '../FormTask/FormTask'
 
 export default function FormModal() {
     const [open, setOpen] = useState(true)
@@ -23,16 +24,16 @@ export default function FormModal() {
                                     <PlusIcon aria-hidden="true" className="h-6 w-6 text-green-600" />
                                 </div>
                                 <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <DialogTitle as="h3" className="text-base font-semibold leading-6 text-gray-900">
+                                    <DialogTitle as="h3" className="text-base font-semibold leading-6 text-gray-900 lg:mt-2">
                                         New Task
                                     </DialogTitle>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500 flex flex-col gap-2">
                                         </p><span><b>Master your to-do list!</b> Describe your new task and choose its <b>urgency level</b> to prioritize your actions. Turn your ideas into reality and make a difference!.</span>
                                     </div>
-                                    {/* Div contenedor de los inputs */}
-                                    <div className='bg-red-500 h-48 my-2'>
-                                        contenedor inputs
+                                    {/* Contenedor de los Input */}
+                                    <div className='h-52'>
+                                        <FormTask/>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +42,7 @@ export default function FormModal() {
                             <button
                                 type="button"
                                 onClick={() => setOpen(false)}
-                                className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
+                                className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
                             >
                                 Create +
                             </button>
