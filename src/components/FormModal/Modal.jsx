@@ -16,13 +16,13 @@ import { useContext } from 'react'
 export default function Modal(props) {
     const { isOpen, setIsOpen } = useContext(ModalContext)
 
-    const CloseModal = () => { isOpen ? setIsOpen(false) : !isOpen ? setIsOpen(true) : pass  }
+    const CloseModal = () => { isOpen ? setIsOpen(false) : !isOpen ? setIsOpen(true) : pass }
 
     return (
         <Dialog open={isOpen} onClose={CloseModal} className="relative z-10">
             <DialogBackdrop
                 transition
-                className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+                className="fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
             />
 
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -51,11 +51,11 @@ export default function Modal(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <div className="bg-zinc-900 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                             <button
                                 type="button"
                                 onClick={CloseModal}
-                                className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
+                                className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
                             >
                                 Create +
                             </button>
@@ -63,9 +63,9 @@ export default function Modal(props) {
                                 type="button"
                                 data-autofocus
                                 onClick={CloseModal}
-                                className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                                className="mt-3 text-white inline-flex w-full justify-center rounded-md bg-red-800 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm  hover:bg-red-700 sm:mt-0 sm:w-auto"
                             >
-                                End
+                                Close
                             </button>
                         </div>
                     </DialogPanel>

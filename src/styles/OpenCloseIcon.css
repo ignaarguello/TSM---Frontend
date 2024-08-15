@@ -16,5 +16,6 @@
     border-radius: 50%;
     padding: 5px;
     transition: transform 1s ease-in-out;
+    cursor: pointer;
   }
 }

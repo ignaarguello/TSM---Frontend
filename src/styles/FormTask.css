@@ -4,5 +4,8 @@
 @media screen and (min-width:360px) {
     #Contenedor-General_FormTask{
         /* border: 2px solid slateblue; */
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 }

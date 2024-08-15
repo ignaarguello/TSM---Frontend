@@ -16,6 +16,7 @@
     background-color: black;
     border-radius: 30px;
     color: white;
+    cursor: pointer;
   }
 
   .Link-Section_LP:hover{
