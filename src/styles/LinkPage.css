@@ -1,0 +1,24 @@
+/* Query para Android - 360px */
+@media screen and (min-width: 360px) {
+  /* Contenedor General de los Links */
+  #Contenedor-General_LP {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: .7rem;
+  }
+
+  /* Propiedades de cada Link */
+  .Link-Section_LP{
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+  }
+
+  .Link-Section_LP:hover{
+    background-color: rgba(0, 0, 0, 0.822);
+  }
+}

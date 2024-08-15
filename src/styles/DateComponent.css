@@ -1,0 +1,25 @@
+/* Media Query para Android - 360px */
+@media screen and (min-width: 360px) {
+  /* Componente General - Padre */
+  #Contenedor-DateComponent-Principal {
+    height: max-content;
+  }
+
+  /* Titulo Today */
+  #Titulo-Today_DCP {
+    font-size: 1.8em;
+    font-family: var(--font-principal);
+  }
+
+  /* Contenedor de la Fecha traida por Hook */
+  #ContenedorLoaderYFecha_DCP {
+    font-weight: 600;
+    margin-left: .3em;
+  }
+
+  /* Contenedor de las fechas (DIA, MES, AÑO) */
+  #Contenedor-DatosFecha_DCP{
+    display: flex;
+    gap: .3rem;
+  }
+}
