@@ -1,8 +1,8 @@
 /* Query para Android - 360px */
-@media screen and (min-width:360px) {
-    #Contenedot-TextArea_TAFT{
-        /* border: 2px solid coral */;
-        display: flex;
-        flex-direction: column;
-    }
+@media screen and (min-width: 360px) {
+  #Contenedot-TextArea_TAFT {
+    /* border: 2px solid coral; */
+    display: flex;
+    flex-direction: column;
+  }
 }

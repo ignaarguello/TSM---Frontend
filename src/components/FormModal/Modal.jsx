@@ -1,12 +1,25 @@
 import { useState } from 'react'
+
+//Icons y Libs
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { PlusIcon } from '@heroicons/react/24/outline'
+
+//Components
 import FormTask from '../FormTask/FormTask'
 
-export default function FormModal() {
-    const [open, setOpen] = useState(true)
+//Context
+import ModalContext from '../../context/ModalContext'
+
+//Hooks
+import { useContext } from 'react'
+
+export default function Modal(props) {
+    const { isOpen, setIsOpen } = useContext(ModalContext)
+
+    const CloseModal = () => { isOpen ? setIsOpen(false) : !isOpen ? setIsOpen(true) : pass  }
+
     return (
-        <Dialog open={open} onClose={setOpen} className="relative z-10">
+        <Dialog open={isOpen} onClose={CloseModal} className="relative z-10">
             <DialogBackdrop
                 transition
                 className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
@@ -33,7 +46,7 @@ export default function FormModal() {
                                     </div>
                                     {/* Contenedor de los Input */}
                                     <div className='h-52'>
-                                        <FormTask/>
+                                        <FormTask />
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +54,7 @@ export default function FormModal() {
                         <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                             <button
                                 type="button"
-                                onClick={() => setOpen(false)}
+                                onClick={CloseModal}
                                 className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
                             >
                                 Create +
@@ -49,7 +62,7 @@ export default function FormModal() {
                             <button
                                 type="button"
                                 data-autofocus
-                                onClick={() => setOpen(false)}
+                                onClick={CloseModal}
                                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
                             >
                                 End
