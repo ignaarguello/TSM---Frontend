@@ -2,7 +2,6 @@ import '../../styles/OpenCloseIcon.css'
 
 //Hooks
 import { useState, useContext } from 'react';
-import useValidateCondicional from '../../hooks/useValidateCondicional';
 
 //Context
 import ModalContext from '../../context/ModalContext';
