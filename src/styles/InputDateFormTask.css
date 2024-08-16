@@ -2,7 +2,7 @@
 @media screen and (min-width: 360px) {
   /* Contenedor del Input Date */
   #Contenedot-TextArea_IDFT {
-    /* border: 2px solid coral; */
+    border: 2px solid coral;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -10,6 +10,7 @@
 
   /* Propiedades del Input Date */
   #InputDate_IDFT{
+    border: 2px solid red;
     margin: 1rem 0;
     height: 3rem;
     padding: 5px;
