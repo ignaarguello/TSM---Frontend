@@ -24,8 +24,10 @@ export default function TextAreaFormTask() {
 
 
   return (
-    <>
-      <Button variant="contained">Create</Button>
-    </>
+    <div id='Contenedot-TextArea_IDFT'>
+      <input type="date" value={FechaSeleccionada} onChange={handleFechaSeleccionada} id='InputDate_IDFT' />
+      <Button variant="contained" id='ButtonCreate-MUI_IDFT'>Create</Button>
+    </div>
+
   )
 }
