@@ -1,8 +1,17 @@
 import React from 'react'
+
+//Estilos
 import '../../styles/InputDateFormTask.css'
 
+//Hooks
 import { useState } from 'react'
 
+//MUI - Material MUI
+import Button from '@mui/material/Button';
+
+
+
+//Componente Input Date
 export default function TextAreaFormTask() {
   const [FechaSeleccionada, setFechaSeleccionada] = useState('')
 
@@ -12,11 +21,11 @@ export default function TextAreaFormTask() {
 
   const FechaFinal = (FechaSeleccionada.split('-').reverse().join('-'))
 
+
+
   return (
-    <div id='Contenedot-TextArea_TAFT'>
-      {/* <textarea name="description-task" id="TextArea_TAFT" placeholder='Annotations'></textarea> */}
-      <label for="fechaNacimiento">Task Date:</label>
-      <input type="date" value={FechaSeleccionada} onChange={handleFechaSeleccionada} id='InputDate' />
-    </div>
+    <>
+      <Button variant="contained">Create</Button>
+    </>
   )
 }
