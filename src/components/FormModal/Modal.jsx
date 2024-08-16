@@ -43,7 +43,7 @@ export default function Modal(props) {
                                     </DialogTitle>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500 flex flex-col gap-2">
-                                            <span><b>Master your to-do list!</b> Describe your new task and choose its <b>urgency level</b> to prioritize your actions. Turn your ideas into reality and make a difference!.</span>
+                                            <span><b className='text-white'>Master your to-do list!</b> Describe your new task and choose its <b className='text-white'>urgency level</b> to prioritize your actions. Turn your ideas into reality and make a difference!.</span>
                                         </p>
                                     </div>
                                     {/* Contenedor de los Input */}
