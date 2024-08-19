@@ -1,11 +1,37 @@
 /* Estilos Form Task */
 
- /* Query para Android - 360px */
-@media screen and (min-width:360px) {
-    #Contenedor-General_FormTask{
-        /* border: 2px solid slateblue; */
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
+/* Query para Android - 360px */
+@media screen and (min-width: 360px) {
+  #Contenedor-General_FormTask {
+    /* border: 4px solid slateblue; */
+    margin-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Propiedades del Input */
+  #Name-Task-Input_IFT {
+    width: 100%;
+    height: 3rem;
+    padding: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    font-size: 14px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+  }
+
+  /* Propiedades del Input Date */
+  #InputDate_IDFT {
+    margin: 1rem 0;
+    height: 3rem;
+    padding: 5px;
+    border-radius: 8px;
+    width: 18rem;
+  }
+
+  #ButtonCreate-MUI_IDFT{
+      width: 100%;
+      margin-top: 1rem;
+  }
 }
