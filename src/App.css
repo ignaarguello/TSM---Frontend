@@ -6,6 +6,13 @@
   --font-principal: "Quicksand", sans-serif;
 }
 
+/* Reseteo General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Media Query de 360px - Android */
 @media screen and (min-width: 360px) {
   /* Propiedades del contenedor General de la aplicación */
