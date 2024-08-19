@@ -4,45 +4,23 @@ import React from 'react'
 import '../../styles/InputDateFormTask.css'
 
 //Hooks
-import { useState } from 'react'
+import { useState, useRef, useContext } from 'react'
 
-//MUI - Material MUI
-import Button from '@mui/material/Button';
-
+//Context
+import DataTaskContext from '../../context/DataTaskContext';
 
 
 //Componente Input Date
 export default function TextAreaFormTask() {
   //Estado de Fecha Seleccionada por el Input
-  const [FechaSeleccionada, setFechaSeleccionada] = useState('')
+  const [SelectedDate, setSelectedDate] = useState('')
 
-  //Estado que modifica el 'type' del Input
-  const [InputType, setInputType] = useState('text')
-
-  //Funcion encargada de modificar el estado del Input - (Text - Date)
-  const ChangeTypeInput = () => {
-    setInputType(InputType === 'text' ? 'datetime-local' : 'text');
-  }
-
-
-  //Funcion de captura el valor del Input - (Date)
-  const handleFechaSeleccionada = (event) => {
-    setFechaSeleccionada(event.target.value)
-  }
-
-  //Funcion de evento para Boton (Create) que muestra la Fecha
-  const ShowFormattedDate = () => {
-    const Day = FechaSeleccionada.slice(0, 10).split('-').reverse().join('-')
-    const Hour = FechaSeleccionada.slice(11)
-
-    setFechaSeleccionada(`${Hour} - ${Day}`)
-  }
-
+  //Variables traidas del Context - (Data Task Context)
+  const { date, setDate } = useContext(DataTaskContext)
 
   return (
     <div id='Contenedot-TextArea_IDFT'>
-      <input type='datetime-local' value={FechaSeleccionada} placeholder="Task Date" onFocus={ChangeTypeInput} onBlur={ChangeTypeInput} onChange={handleFechaSeleccionada} id='InputDate_IDFT' />
-      <Button variant="contained" id='ButtonCreate-MUI_IDFT' onClick={ShowFormattedDate}>Create</Button>
+      <input type='datetime-local' onChange={handleSelectedDate} value={SelectedDate} id='InputDate_IDFT' />
     </div>
 
   )
