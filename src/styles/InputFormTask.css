@@ -17,6 +17,8 @@
     border: 1px solid gainsboro;
     border-radius: 8px;
     font-size: 14px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
   }
 
   /* Propiedades del Label */
