@@ -41,7 +41,7 @@ export default function TextAreaFormTask() {
 
   return (
     <div id='Contenedot-TextArea_IDFT'>
-      <input type={InputType} value={FechaSeleccionada} placeholder="Task Date" onFocus={ChangeTypeInput} onBlur={ChangeTypeInput} onChange={handleFechaSeleccionada} id='InputDate_IDFT' />
+      <input type='datetime-local' value={FechaSeleccionada} placeholder="Task Date" onFocus={ChangeTypeInput} onBlur={ChangeTypeInput} onChange={handleFechaSeleccionada} id='InputDate_IDFT' />
       <Button variant="contained" id='ButtonCreate-MUI_IDFT' onClick={ShowFormattedDate}>Create</Button>
     </div>
 
