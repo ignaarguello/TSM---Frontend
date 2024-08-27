@@ -39,21 +39,24 @@
   .ItemSelect_FT {
     width: 50%;
     height: 100%;
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
   }
   #ButtonCreate-MUI_IDFT {
-    width: 100%;
+    width: 50%;
     margin-top: 1rem;
+    background-color: forestgreen;
+    color: white;
+    align-self: center;
   }
 
   .ItemSelected {
     background-color: black;
-    border: 2px solid darkslateblue;
+    border: 2px solid gray;
     color: white;
   }
 }
