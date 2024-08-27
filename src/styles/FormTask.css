@@ -7,6 +7,12 @@
     margin-top: 1.3rem;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Contenedor del Input Text - (Name Task) */
+  #ContendorInputText_FT {
+    width: 100%;
   }
 
   /* Propiedades del Input */
@@ -21,17 +27,33 @@
     -webkit-user-select: none;
   }
 
-  /* Propiedades del Input Date */
-  #InputDate_IDFT {
-    margin: 1rem 0;
+  /* Contenedor Select - (Auto o Casa) */
+  #ContenedorSelect_FT {
+    display: flex;
     height: 3rem;
-    padding: 5px;
-    border-radius: 8px;
-    width: 18rem;
+    gap: 8px;
+    margin-top: 0.5rem;
   }
 
-  #ButtonCreate-MUI_IDFT{
-      width: 100%;
-      margin-top: 1rem;
+  /* Propiedades del Select - (Casa o Auto) */
+  .ItemSelect_FT {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  #ButtonCreate-MUI_IDFT {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .ItemSelected {
+    background-color: black;
+    border: 2px solid darkslateblue;
+    color: white;
   }
 }

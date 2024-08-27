@@ -5,30 +5,66 @@ import '../../styles/FormTask.css'
 import Button from '@mui/material/Button';
 
 //Hooks
-import { useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 
 //Componente Formulario Padre
 export default function FormTask() {
-    const NameRef = useRef()
-    const DateRef = useRef()
+    //Variales de estado de los Input 
+    const [name, setName] = useState()
+    const [type, setType] = useState()
+    const [SelectedActive, setSelectedActive] = useState(null)
 
-    const CollectedData = {
-        name: NameRef?.current?.value,
-        date: DateRef?.current?.value,
+    //Variables que usamos para obtener el metodo/objeto - (Date)
+    const date = new Date()
+    const day = date.getDate()
+    const month = date.getMonth()
+    const year = date.getFullYear()
+    const FormattedDate = `${day}/${month}/${year}`
+
+    //Modelo de data a enviar
+    const ModelData = { name: name, date: FormattedDate, type: type }
+
+    //Funcion set para el nombre de la task
+    const SetName = (event) => setName(event.target.value)
+
+    //Funcion encargada de modificar las clases de los Select - (Auto o Casa)
+    //Usaremos JQuery...
+    const SelectItem = document.querySelectorAll('.ItemSelect_FT')
+
+    //Funcion encargada de la logica de enviar la data
+    const CollectData = () => {
+        console.log(ModelData)
+        console.log(SelectItem)
     }
 
-    const SendData = (event) => {
-        event.preventDefault()
-    }
+    const handleTypeChange = (type) => {
+        setSelectedActive(type);
+    };
 
+    //Componente Formulario para crear las Task - (Form Task)
     return (
         <div id='Contenedor-General_FormTask'>
-            <form onSubmit={SendData}>
-                <input type="text" name="name-task-input" id="Name-Task-Input_IFT" placeholder='Task Name' ref={NameRef} />
-                <input type='datetime-local' id='InputDate_IDFT' ref={DateRef} />
-                <Button type='submit' variant="contained" id='ButtonCreate-MUI_IDFT'>Create</Button>
-            </form>
+            <section id='ContendorInputText_FT'>
+                <input onInput={SetName} type="text" name="name-task-input" id="Name-Task-Input_IFT" placeholder='Task Name' />
+            </section>
+            <section id='ContenedorSelect_FT'>
+                <div
+                    onClick={() => handleTypeChange('Auto')}
+                    className={`ItemSelect_FT ${SelectedActive === 'Auto' ? 'ItemSelected' : ''}`}
+                    id='Select-Auto_FT'
+                >
+                    Auto
+                </div>
+                <div
+                    onClick={() => handleTypeChange('Casa')}
+                    className={`ItemSelect_FT ${SelectedActive === 'Casa' ? 'ItemSelected' : ''}`}
+                    id='Select-Casa_FT'
+                >
+                    Casa
+                </div>
+            </section>
+            <Button type='click' onClick={CollectData} variant="contained" id='ButtonCreate-MUI_IDFT'>Create</Button>
         </div>
     )
 }
