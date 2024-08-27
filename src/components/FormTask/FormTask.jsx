@@ -12,7 +12,6 @@ import { useState, useEffect } from 'react';
 export default function FormTask() {
     //Variales de estado de los Input 
     const [name, setName] = useState()
-    const [type, setType] = useState()
     const [SelectedActive, setSelectedActive] = useState(null)
 
     //Variables que usamos para obtener el metodo/objeto - (Date)
@@ -23,7 +22,7 @@ export default function FormTask() {
     const FormattedDate = `${day}/${month}/${year}`
 
     //Modelo de data a enviar
-    const ModelData = { name: name, date: FormattedDate, type: type }
+    const ModelData = { name: name, date: FormattedDate, type: SelectedActive }
 
     //Funcion set para el nombre de la task
     const SetName = (event) => setName(event.target.value)
@@ -40,6 +39,7 @@ export default function FormTask() {
 
     const handleTypeChange = (type) => {
         setSelectedActive(type);
+        console.log(ModelData)
     };
 
     //Componente Formulario para crear las Task - (Form Task)
@@ -64,7 +64,7 @@ export default function FormTask() {
                     Casa
                 </div>
             </section>
-            <Button type='click' onClick={CollectData} id='ButtonCreate-MUI_IDFT'>Create</Button>
+            <Button type='click' onClick={handleTypeChange} id='ButtonCreate-MUI_IDFT'>Create</Button>
         </div>
     )
 }
