@@ -64,7 +64,7 @@ export default function FormTask() {
                     Casa
                 </div>
             </section>
-            <Button type='click' onClick={CollectData} variant="contained" id='ButtonCreate-MUI_IDFT'>Create</Button>
+            <Button type='click' onClick={CollectData} id='ButtonCreate-MUI_IDFT'>Create</Button>
         </div>
     )
 }
