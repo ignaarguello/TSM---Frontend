@@ -1,0 +1,38 @@
+/* Android - 360px */
+@media screen and (min-width: 360px) {
+  /* Contenedor General del TaskBox */
+  #Contenedor-General_TaskBox {
+    height: 10rem;
+    margin-top: 1.3rem;
+  }
+
+  /* Contenedor de CADA - TaskFox */
+  .TaskContenedor_TaskBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin: 0.3rem 0;
+    padding: 0.6rem;
+    border-radius: 5px;
+  }
+
+  /* Name Task */
+  #Name_TaskBox {
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+  }
+
+  /* Type Task */
+  #Type_TaskBox {
+    color: gray;
+    font-weight: 300;
+  }
+
+  /* Date Task */
+  #Date_TaskBox {
+    color: rgb(163 230 53);
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
