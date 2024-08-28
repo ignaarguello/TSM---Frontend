@@ -4,6 +4,7 @@ import './App.css'
 import DateComponent from './components/DateComponent/DateComponent'
 import FormModal from './components/FormModal/FormModal'
 import LinkPage from './components/LinkPage/LinkPage'
+import TaskBox from './components/TaskBox/TaskBox'
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
       <LinkPage />
       {/* Componente de Boton y Modal */}
       <FormModal />
+      {/* Componente que renderiza las tareas */}
+      <TaskBox />
     </div>
   )
 }

@@ -21,25 +21,15 @@ export default function FormTask() {
     const year = date.getFullYear()
     const FormattedDate = `${day}/${month}/${year}`
 
-    //Modelo de data a enviar
+    //Modelo de data a enviar - (Nombre, Fecha, Tipo)
     const ModelData = { name: name, date: FormattedDate, type: SelectedActive }
 
     //Funcion set para el nombre de la task
     const SetName = (event) => setName(event.target.value)
 
-    //Funcion encargada de modificar las clases de los Select - (Auto o Casa)
-    //Usaremos JQuery...
-    const SelectItem = document.querySelectorAll('.ItemSelect_FT')
-
-    //Funcion encargada de la logica de enviar la data
-    const CollectData = () => {
-        console.log(ModelData)
-        console.log(SelectItem)
-    }
-
+    //Funcion encargada de la logica de enviar la data y Setear el Type 
     const handleTypeChange = (type) => {
         setSelectedActive(type);
-        console.log(ModelData)
     };
 
     //Componente Formulario para crear las Task - (Form Task)
