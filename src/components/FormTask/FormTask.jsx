@@ -7,9 +7,25 @@ import Button from '@mui/material/Button';
 //Hooks
 import { useState, useEffect } from 'react';
 
+//Context
+import { useContext } from 'react';
+import ModalContext from '../../context/ModalContext';
+
+//Redux
+import { useSelector, useDispatch } from 'react-redux';
+import task_actions from '../../redux/actions/TaskActions'
+
 
 //Componente Formulario Padre
 export default function FormTask() {
+    //Variables de Redux
+    const dispatch = useDispatch()
+
+
+    //Variables del Contexto - Para cerrar el modal
+    const { isOpen, setIsOpen } = useContext(ModalContext)
+    const {post_new_task} = task_actions
+
     //Variales de estado de los Input 
     const [name, setName] = useState()
     const [SelectedActive, setSelectedActive] = useState(null)
@@ -31,6 +47,13 @@ export default function FormTask() {
     const handleTypeChange = (type) => {
         setSelectedActive(type);
     };
+
+    //? Funcion encargada de enviar la data extraida del formulario modal
+    const SetDataFinal = () => {
+        console.log(ModelData)
+        setIsOpen(false)
+        dispatch(post_new_task(ModelData))
+    }
 
     //Componente Formulario para crear las Task - (Form Task)
     return (
@@ -54,7 +77,7 @@ export default function FormTask() {
                     Casa
                 </div>
             </section>
-            <Button type='click' onClick={handleTypeChange} id='ButtonCreate-MUI_IDFT'>Create</Button>
+            <Button type='click' onClick={SetDataFinal} id='ButtonCreate-MUI_IDFT'>Create</Button>
         </div>
     )
 }
