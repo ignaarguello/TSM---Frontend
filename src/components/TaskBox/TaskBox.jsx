@@ -15,14 +15,13 @@ import task_actions from '../../redux/actions/TaskActions'
 
 export default function TaskBox() {
     //Dispatch y llamadas al store + Actions
-    let dispatch = useDispatch()
-    const { AllTask } = useSelector(store => store.task)
+    const dispatch = useDispatch()
+    const { AllTask, NewTask } = useSelector(store => store.task)
     const { get_data_task } = task_actions
 
     useEffect(() => {
         dispatch(get_data_task())
-    }, [])
-
+    }, [NewTask])
 
     return (
         <div id='Contenedor-General_TaskBox'>

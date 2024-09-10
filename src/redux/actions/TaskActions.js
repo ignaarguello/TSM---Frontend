@@ -10,6 +10,7 @@ import { BACK_URL } from '../../Api/Api'
 const get_data_task = createAsyncThunk('get_data_task', async () => {
     try {
         const responde = await axios.get(`${BACK_URL}/todo`)
+        console.log(responde.data.reverse())
         const headersData = {
             contentType: responde.headers['content-type'],
             contentLength: responde.headers['content-length'],
@@ -26,7 +27,8 @@ const get_data_task = createAsyncThunk('get_data_task', async () => {
 //? Action - POST
 const post_new_task = createAsyncThunk('post_new_task', async (data) => {
     try {
-        const responde = await axios.post(`${BACK_URL}/todo`, data)
+        const responde = await axios.post(`${BACK_URL}todo/`, data)
+        console.log(responde)
         return responde
     } catch (error) {
         console.log('Error ocurrido:', error)

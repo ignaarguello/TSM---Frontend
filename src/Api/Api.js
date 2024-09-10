@@ -2,4 +2,4 @@
 /* export const BACK_URL = 'X'; */
 
 //?Desarrollo
-export const BACK_URL = 'http://localhost:5000';
+export const BACK_URL = 'http://localhost:5000/';
