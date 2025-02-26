@@ -15,11 +15,27 @@
 
 /* Media Query de 360px - Android */
 @media screen and (min-width: 360px) {
-  /* Propiedades del contenedor General de la aplicación */
-  #Contenedor-App {
-    background-color: var(--color--principal);
+  /* Contenedor Aplicacion - High Level  */
+  #Aplicacion {
+    margin: 10px;
     height: 100vh;
     width: 100%;
-    padding: 1rem; /* Padding General para la App */
+    padding: .1rem; /* Padding General para la App */
   }
+
+  /* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
+  #Subcontenedor_Aplicacion {
+    /* border: 2px solid red; */
+  }
+}
+
+/* Macbook Air - Laptops */
+
+/* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
+#Subcontenedor_Aplicacion {
+  background-color: #121212;
+  height: 96vh;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
 }

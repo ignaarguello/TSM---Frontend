@@ -19,21 +19,29 @@ export default function TaskBox() {
     const { AllTask, NewTask } = useSelector(store => store.task)
     const { get_data_task } = task_actions
 
+    // Hook encargado de actualizar la interfaz y realizar la peticion GET al Backend
     useEffect(() => {
         dispatch(get_data_task())
     }, [NewTask])
 
     return (
         <div id='Contenedor-General_TaskBox'>
-            {
-                AllTask?.data?.map((elem, index) =>
-                    <div key={index} className='TaskContenedor_TaskBox bg-zinc-800'>
-                        <span id='Name_TaskBox'>{elem.name}</span>
-                        <span id='Type_TaskBox'>{elem.type}</span>
-                        <span id='Date_TaskBox'>{elem.date}</span>
-                    </div>
-                )
-            }
+            <section id='Contenedor-1_TaskBox'>
+                <section>
+                    <h1 id='Titulo-TaskManagement__TaskBox'>Task Management</h1>
+                </section>
+            </section>
+            <section id='Contenedor-2_TaskBox'>
+                {
+                    AllTask?.data?.map((elem, index) =>
+                        <div key={index} className='TaskContenedor_TaskBox bg-zinc-800'>
+                            <span id='Name_TaskBox'>{elem.name}</span>
+                            <span id='Type_TaskBox'>{elem.type}</span>
+                            <span id='Date_TaskBox'>{elem.date}</span>
+                        </div>
+                    )
+                }
+            </section>
         </div>
     )
 }
