@@ -12,14 +12,15 @@ function App() {
   return (
     <div id='Aplicacion'>
       <div id='Subcontenedor_Aplicacion'>
-        {/* Componente de la Fecha */}
-        <DateComponent />
-        {/* Componente con los Links para movernos entre seccion (Home, Auto) */}
+        <section id='BarraNavegacion_Aplicacion'>
+          <DateComponent />
+
+        </section>
+        <section id='TaskBox_Aplicacion'>
+          <TaskBox />
+        </section>
         {/* <LinkPage /> */}
-        {/* Componente de Boton y Modal */}
-        {/*  <FormModal /> */}
-        {/* Componente que renderiza las tareas */}
-        {/* <TaskBox /> */}
+         <FormModal />
       </div>
     </div>
   )

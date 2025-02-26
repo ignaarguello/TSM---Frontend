@@ -11,7 +11,10 @@ import data_task from '../../data/data-task'
 
 //Redux / Actions
 import { useDispatch, useSelector } from 'react-redux'
+
+//Componentes
 import task_actions from '../../redux/actions/TaskActions'
+import NavbarTaskBox from './NavbarTaskBox'
 
 export default function TaskBox() {
     //Dispatch y llamadas al store + Actions
@@ -26,22 +29,7 @@ export default function TaskBox() {
 
     return (
         <div id='Contenedor-General_TaskBox'>
-            <section id='Contenedor-1_TaskBox'>
-                <section>
-                    <h1 id='Titulo-TaskManagement__TaskBox'>Task Management</h1>
-                </section>
-            </section>
-            <section id='Contenedor-2_TaskBox'>
-                {
-                    AllTask?.data?.map((elem, index) =>
-                        <div key={index} className='TaskContenedor_TaskBox bg-zinc-800'>
-                            <span id='Name_TaskBox'>{elem.name}</span>
-                            <span id='Type_TaskBox'>{elem.type}</span>
-                            <span id='Date_TaskBox'>{elem.date}</span>
-                        </div>
-                    )
-                }
-            </section>
+           <NavbarTaskBox/>
         </div>
     )
 }

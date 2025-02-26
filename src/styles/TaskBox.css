@@ -53,65 +53,18 @@
 }
 
 /* Macbook Air - Laptop - (1440px) */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width:1440px) {
   /* Contenedor General */
   #Contenedor-General_TaskBox {
-    /* border: 3px solid greenyellow; */
-    display: flex;
-    flex-direction: row;
-    height: 65vh;
-    padding: 1rem;
-  }
-
-  /* Section - 1 */
-  #Contenedor-1_TaskBox {
-    border: 2px solid red;
-    display: block;
-    width: 55%;
+    margin: 0;
+   /*  border: 1px solid slateblue; */
     height: 100%;
-    border-radius: 10px;
-  }
-
-  /* Section - 2  */
-  #Contenedor-2_TaskBox {
-    border: 1px solid gainsboro;
-    width: 45%;
-    overflow-y: scroll;
-    height: 95%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 10px;
-    gap: 0.5rem;
   }
 
-  /* Contenedor de CADA - TaskFox */
-  .TaskContenedor_TaskBox {
-    width: 100%;
-    margin: 0;
-  }
-
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
-
-  #Titulo-TaskManagement__TaskBox {
-    /* border: 2px solid blue; */
-    font-size: 2.8rem;
-    text-align: center;
-    position: relative;
-  }
-
-  #Titulo-TaskManagement__TaskBox::before {
-    content: "";
-    display: block;
-    width: 10%; /* Ajusta el ancho según tus necesidades */
-    height: 3.5px; /* Ajusta el grosor del subrayado */
-    background-color: rgb(19, 185, 19); /* Color del subrayado */
-    position: absolute;
-    bottom: -5px; /* Ajusta la posición vertical */
-    left: 50%;
-    transform: translateX(-50%);
+  /* Contenedor 1 */
+  #Contenedor-1_TaskBox{
+ /*    border: 2px solid blue; */
   }
 }

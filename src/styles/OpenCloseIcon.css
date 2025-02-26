@@ -19,3 +19,34 @@
     cursor: pointer;
   }
 }
+
+/* Macbook Air y Laptops - 1440px */
+@media screen and (min-width: 1440px) {
+  /* Contenedor del Icono */
+  #ContenedorOpenCloseIcon {
+    margin-top: 0;
+    width: 4.9rem;
+    height: 4.9rem;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1rem;
+    background-color: #121212;
+    border-radius: 50px 10px 0px 50px;
+    transition: .7s ease;
+  }
+
+  /* Propiedades del Icono */
+  #CloseIcon_OCI {
+    height: 2.6rem;
+    width: 2.6rem;
+    background-color: #121212;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    transition: .7s ease;
+  }
+}
+

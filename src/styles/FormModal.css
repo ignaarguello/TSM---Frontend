@@ -1,0 +1,9 @@
+/* Macbook Air - Laptops */
+@media screen and (min-width:1440px) {
+    #ContenedorGeneral_FormModal{
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+}

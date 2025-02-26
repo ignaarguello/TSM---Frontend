@@ -17,10 +17,11 @@
 @media screen and (min-width: 360px) {
   /* Contenedor Aplicacion - High Level  */
   #Aplicacion {
+    overflow: hidden;
     margin: 10px;
-    height: 100vh;
+    height: 97vh;
     width: 100%;
-    padding: .1rem; /* Padding General para la App */
+    padding: .5rem; /* Padding General para la App */
   }
 
   /* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
@@ -31,11 +32,32 @@
 
 /* Macbook Air - Laptops */
 
-/* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
-#Subcontenedor_Aplicacion {
-  background-color: #121212;
-  height: 96vh;
-  width: 100%;
-  border-radius: 10px;
-  padding: 15px;
+@media screen and (min-width:1440px) {
+  /* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
+  #Subcontenedor_Aplicacion {
+    background-color: #121212;
+    height: 96vh;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+  }
+
+  /* Barra de navegacion lateral */
+  #BarraNavegacion_Aplicacion{
+    /* border: 2px solid green; */
+    width: 25%;
+    color: white;
+    border-right: 1px solid grey;
+    padding: 1rem;
+  }
+
+  /* TaskBox - Donde renderizamos las tareas */
+  #TaskBox_Aplicacion{
+  /*   border: 2px solid yellow; */
+    width: 85%;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+  }
+  
 }
