@@ -24,7 +24,7 @@
 
   /* Items de la card - (Nombre,tipo,fecha,estado)  */
   .ItemTask_CardTask {
-    font-size: 14px;
+    font-size: var(--size--principal);
     font-weight: 500;
     width: 25%;
     text-align: center;

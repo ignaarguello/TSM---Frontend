@@ -4,6 +4,7 @@ import './App.css'
 import DateComponent from './components/DateComponent/DateComponent'
 import FormModal from './components/FormModal/FormModal'
 import LinkPage from './components/LinkPage/LinkPage'
+import NavbarLinks from './components/NavbarLinks/NavbarLinks'
 import TaskBox from './components/TaskBox/TaskBox'
 
 
@@ -14,12 +15,13 @@ function App() {
       <div id='Subcontenedor_Aplicacion'>
         <section id='BarraNavegacion_Aplicacion'>
           <DateComponent />
+          <NavbarLinks />
         </section>
         <section id='TaskBox_Aplicacion'>
           <TaskBox />
         </section>
         {/* <LinkPage /> */}
-         <FormModal />
+        <FormModal />
       </div>
     </div>
   )

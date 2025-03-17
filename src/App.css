@@ -4,6 +4,7 @@
 :root {
   --color--principal: white;
   --font-principal: "Quicksand", sans-serif;
+  --size--principal: 0.9rem;
 }
 
 /* Reseteo General */
@@ -21,7 +22,7 @@
     margin: 10px;
     height: 97vh;
     width: 100%;
-    padding: .5rem; /* Padding General para la App */
+    padding: 0.5rem; /* Padding General para la App */
   }
 
   /* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
@@ -32,7 +33,7 @@
 
 /* Macbook Air - Laptops */
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width: 1440px) {
   /* Subcontenedor donde se encuentra toda la aplicacion - Mid Level */
   #Subcontenedor_Aplicacion {
     background-color: #121212;
@@ -43,7 +44,7 @@
   }
 
   /* Barra de navegacion lateral */
-  #BarraNavegacion_Aplicacion{
+  #BarraNavegacion_Aplicacion {
     /* border: 2px solid green; */
     width: 25%;
     color: white;
@@ -52,12 +53,11 @@
   }
 
   /* TaskBox - Donde renderizamos las tareas */
-  #TaskBox_Aplicacion{
-  /*   border: 2px solid yellow; */
+  #TaskBox_Aplicacion {
+    /*   border: 2px solid yellow; */
     width: 85%;
     background-color: #000000;
     color: white;
     border-radius: 10px;
   }
-  
 }

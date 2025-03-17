@@ -26,7 +26,7 @@
     #BotonCrear_NavbarTaskBox{
         padding: 10px;
         border-radius: 10px;
-        font-size: .9rem;
+        font-size: var( --size--principal);
         background-color: oklch(0.769 0.188 70.08);
     }
 }
