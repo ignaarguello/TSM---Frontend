@@ -53,18 +53,24 @@
 }
 
 /* Macbook Air - Laptop - (1440px) */
-@media screen and (min-width:1440px) {
+@media screen and (min-width: 1440px) {
   /* Contenedor General */
   #Contenedor-General_TaskBox {
     margin: 0;
-   /*  border: 1px solid slateblue; */
+    /*  border: 1px solid slateblue; */
     height: 100%;
     display: flex;
     flex-direction: column;
   }
 
   /* Contenedor 1 */
-  #Contenedor-1_TaskBox{
- /*    border: 2px solid blue; */
+  #Contenedor-1_TaskBox {
+    /*    border: 2px solid blue; */
+  }
+
+  /* Contenedor del total de las tareas */
+  #TotalTareas_TaskBox {
+    height: 7vh;
+    background-color: #121212;
   }
 }

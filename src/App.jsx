@@ -14,7 +14,6 @@ function App() {
       <div id='Subcontenedor_Aplicacion'>
         <section id='BarraNavegacion_Aplicacion'>
           <DateComponent />
-
         </section>
         <section id='TaskBox_Aplicacion'>
           <TaskBox />
