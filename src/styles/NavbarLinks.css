@@ -1,0 +1,23 @@
+@media screen and (min-width: 1440px) {
+  /* Contenedor General */
+  #ContenedorPrincipal__NavbarLinks {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  /* Lista Contenedora */
+  #ListaContenedoraDeLinks__NavbarLinks {
+    margin-top: 11vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 300;
+  }
+
+  /* Navbar Links */
+  .ItemSeleccionado__NavbarLinks{
+    color: #F19933;
+  }
+}
