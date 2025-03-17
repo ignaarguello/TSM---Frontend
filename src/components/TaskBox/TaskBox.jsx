@@ -14,7 +14,6 @@ export default function TaskBox() {
     return (
         <div id='Contenedor-General_TaskBox'>
             <NavbarTaskBox />
-            <section id='TotalTareas_TaskBox'></section>
             <CardTask />
         </div>
     )

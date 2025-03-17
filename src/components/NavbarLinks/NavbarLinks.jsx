@@ -7,7 +7,7 @@ import '../../styles/NavbarLinks.css'
 import { useState } from 'react';
 
 //Data Links
-const Datalinks = ['Completadas', 'En Proceso', 'Incompletas']
+const Datalinks = ['Completadas', 'En Proceso']
 
 
 export default function NavbarLinks() {
@@ -27,7 +27,6 @@ export default function NavbarLinks() {
                         <h2
                             className={selectedIndex === index ? 'ItemSeleccionado__NavbarLinks' : ''} // Agregamos la clase condicional
                         >
-                            {selectedIndex === index && '• '}
                             {elem}
                         </h2>
                     </div>
