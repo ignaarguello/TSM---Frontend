@@ -9,7 +9,9 @@
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 5px;
+    padding: .8rem;
+    margin-top: 1.5rem;
   }
 
   /* Contenedor Card Individual  */
@@ -20,12 +22,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px;
+    border-radius: 4px;
   }
 
   /* Items de la card - (Nombre,tipo,fecha,estado)  */
   .ItemTask_CardTask {
     font-size: var(--size--principal);
-    font-weight: 500;
+    font-weight: 300;
     width: 25%;
     text-align: center;
   }

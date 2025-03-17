@@ -67,10 +67,4 @@
   #Contenedor-1_TaskBox {
     /*    border: 2px solid blue; */
   }
-
-  /* Contenedor del total de las tareas */
-  #TotalTareas_TaskBox {
-    height: 7vh;
-    background-color: #121212;
-  }
 }
