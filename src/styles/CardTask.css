@@ -1,0 +1,32 @@
+/* Mobile */
+@media screen and (min-width: 360px) {
+}
+
+/* Macbook Air y Laptops */
+@media screen and (min-width: 1440px) {
+  /* Contenedor General */
+  #ContenedorGeneral_CardTask {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  /* Contenedor Card Individual  */
+  #ContenedorIndividual_CardTask {
+    border: 1px solid #101010;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  /* Items de la card - (Nombre,tipo,fecha,estado)  */
+  .ItemTask_CardTask {
+    font-size: 14px;
+    font-weight: 500;
+    width: 25%;
+    text-align: center;
+  }
+}

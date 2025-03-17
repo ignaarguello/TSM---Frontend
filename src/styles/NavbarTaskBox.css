@@ -1,0 +1,32 @@
+/* Estilos Barra de navegacion de la Taskbox */
+@media screen and (min-width:1440px) {
+    /* Contenedor General */
+    #ContenedorGeneral_NavbarTaskBox{
+        height: 10vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    /* Titulo - 'Tasks' */
+    #TituloTask_NavbarTaskBox{
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    /* Contenedor Botones de Interaccion - (Crear - Eliminar) */
+    #BotonesDeInteraccion_NavbarTaskBox{
+     /*    border: 2px solid skyblue; */
+    }
+
+    /* Boton Crear */
+    #BotonCrear_NavbarTaskBox{
+        padding: 10px;
+        border-radius: 10px;
+        font-size: .9rem;
+        background-color: oklch(0.769 0.188 70.08);
+    }
+}

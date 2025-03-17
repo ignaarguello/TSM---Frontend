@@ -38,7 +38,7 @@ export default function FormTask() {
     const FormattedDate = `${day}/${month}/${year}`
 
     //Modelo de data a enviar - (Nombre, Fecha, Tipo)
-    const ModelData = { name: name, date: FormattedDate, type: SelectedActive }
+    const ModelData = { name: name, date: FormattedDate, type: SelectedActive, done: false }
 
     //Funcion set para el nombre de la task
     const SetName = (event) => setName(event.target.value)

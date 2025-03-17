@@ -2,8 +2,22 @@
 @media screen and (min-width: 360px) {
   /* Contenedor General del TaskBox */
   #Contenedor-General_TaskBox {
-    height: 10rem;
+    min-height: 10rem;
     margin-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Section - 1 */
+  /* Hidden in Mobile */
+  #Contenedor-1_TaskBox {
+    /*     border: 2px solid red; */
+    display: none;
+  }
+
+  /* Section - 2  */
+  #Contenedor-2_TaskBox {
+    /* border: 2px solid seagreen; */
   }
 
   /* Contenedor de CADA - TaskFox */
@@ -14,6 +28,7 @@
     margin: 0.3rem 0;
     padding: 0.6rem;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   /* Name Task */
@@ -34,5 +49,28 @@
     color: rgb(163 230 53);
     font-weight: 300;
     font-size: 15px;
+  }
+}
+
+/* Macbook Air - Laptop - (1440px) */
+@media screen and (min-width: 1440px) {
+  /* Contenedor General */
+  #Contenedor-General_TaskBox {
+    margin: 0;
+    /*  border: 1px solid slateblue; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Contenedor 1 */
+  #Contenedor-1_TaskBox {
+    /*    border: 2px solid blue; */
+  }
+
+  /* Contenedor del total de las tareas */
+  #TotalTareas_TaskBox {
+    height: 7vh;
+    background-color: #121212;
   }
 }
